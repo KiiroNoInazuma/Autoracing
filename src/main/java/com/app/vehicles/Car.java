@@ -7,11 +7,11 @@ public class Car extends Vehicle{
 
     @Override
     public void startMoving() {
-        System.out.printf("Автомобиль %s %s начал движение", getBrand(), getModel());
+        System.out.printf("\nАвтомобиль %s %s начал движение", getBrand(), getModel());
     }
 
     @Override
     public void finishMoving() {
-        System.out.printf("Автомобиль %s %s остановился", getBrand(), getModel());
+        System.out.printf("\nАвтомобиль %s %s остановился", getBrand(), getModel());
     }
 }

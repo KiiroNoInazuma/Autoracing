@@ -7,11 +7,11 @@ public class Truck extends Vehicle{
 
     @Override
     public void startMoving() {
-        System.out.printf("Грузовик %s %s начал движение", getBrand(), getModel());
+        System.out.printf("\nГрузовик %s %s начал движение", getBrand(), getModel());
     }
 
     @Override
     public void finishMoving() {
-        System.out.printf("Грузовик %s %s остановился", getBrand(), getModel());
+        System.out.printf("\nГрузовик %s %s остановился", getBrand(), getModel());
     }
 }
