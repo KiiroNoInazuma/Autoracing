@@ -1,18 +1,22 @@
 package com.app.vehicles;
 
+import com.app.stat.Competitive;
+
 import java.util.Objects;
 
 import static java.util.Objects.isNull;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Competitive {
     private final String brand;
     private final String model;
     private final Double engineCapacity;
+    private double bestLapTime;
 
-    public Vehicle(String brand, String model, Double engineCapacity) {
+    public Vehicle(String brand, String model, Double engineCapacity, double bestLapTime) {
         this.brand = propertiesValidate(brand);
         this.model = propertiesValidate(model);
         this.engineCapacity = propertiesValidate(engineCapacity);
+        this.bestLapTime = bestLapTime;
     }
 
     public abstract void startMoving();
@@ -39,6 +43,13 @@ public abstract class Vehicle {
 
     protected String getModel() {
         return model;
+    }
+    protected double bestLapTime() {
+        return bestLapTime;
+    }
+
+    public void setBestLapTime(double bestLapTime) {
+        this.bestLapTime = bestLapTime;
     }
 
     private String checkVehicle() {
