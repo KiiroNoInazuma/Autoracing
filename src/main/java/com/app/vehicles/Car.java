@@ -2,8 +2,8 @@ package com.app.vehicles;
 
 public class Car extends Vehicle{
 
-    public Car(String brand, String model, Double engineCapacity, double bestLapTime) {
-        super(brand, model, engineCapacity, bestLapTime);
+    public Car(String brand, String model, Double engineCapacity, double bestLapTime, int maxSpeed) {
+        super(brand, model, engineCapacity, bestLapTime, maxSpeed);
     }
 
     @Override
@@ -23,11 +23,11 @@ public class Car extends Vehicle{
 
     @Override
     public void printBestLapTime() {
-        System.out.println("Лучшее время круга автомобиля: "+ bestLapTime());
+        System.out.println("Лучшее время круга автомобиля: "+ showBestLapTime());
     }
 
     @Override
     public void printMaximumSpeed() {
-
+        System.out.println("Максимально скорость автомобиля: "+ showMaxSpeed());
     }
 }

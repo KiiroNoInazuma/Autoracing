@@ -11,12 +11,14 @@ public abstract class Vehicle implements Competitive {
     private final String model;
     private final Double engineCapacity;
     private double bestLapTime;
+    private int maxSpeed;
 
-    public Vehicle(String brand, String model, Double engineCapacity, double bestLapTime) {
+    public Vehicle(String brand, String model, Double engineCapacity, double bestLapTime, int maxSpeed) {
         this.brand = propertiesValidate(brand);
         this.model = propertiesValidate(model);
         this.engineCapacity = propertiesValidate(engineCapacity);
         this.bestLapTime = bestLapTime;
+        this.maxSpeed = maxSpeed;
     }
 
     public abstract void startMoving();
@@ -44,12 +46,20 @@ public abstract class Vehicle implements Competitive {
     protected String getModel() {
         return model;
     }
-    protected double bestLapTime() {
+    protected double showBestLapTime() {
         return bestLapTime;
     }
 
     public void setBestLapTime(double bestLapTime) {
         this.bestLapTime = bestLapTime;
+    }
+
+    protected int showMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
     }
 
     private String checkVehicle() {
