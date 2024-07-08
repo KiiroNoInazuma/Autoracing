@@ -3,7 +3,7 @@ package com.app.stat;
 public interface Competitive {
     void carryOutMaintenance();
 
-    void printBestLapTime();
+    void printBestLapTime(String time);
 
-    void printMaximumSpeed();
+    void printMaximumSpeed(int speed);
 }
