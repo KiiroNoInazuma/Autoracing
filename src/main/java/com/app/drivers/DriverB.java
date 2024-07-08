@@ -17,13 +17,13 @@ public class DriverB extends Driver<Car> {
 
     @Override
     public void driverFinishMoving(Car transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " заглушил двигатель");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " заглушил двигатель");
         transport.finishMoving();
     }
 
     @Override
     public void driverRefuelCar(Car transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " остановился заправиться");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " остановился заправиться");
         transport.carryOutMaintenance();
     }
 

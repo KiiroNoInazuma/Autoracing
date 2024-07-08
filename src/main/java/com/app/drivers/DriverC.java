@@ -10,19 +10,19 @@ public class DriverC extends Driver<Truck>{
 
     @Override
     public void driverStartMoving(Truck transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " запустил двигатель");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " запустил двигатель");
         transport.startMoving();
     }
 
     @Override
     public void driverFinishMoving(Truck transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " заглушил двигатель");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " заглушил двигатель");
         transport.finishMoving();
     }
 
     @Override
     public void driverRefuelCar(Truck transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " остановился заправиться");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " остановился заправиться");
         transport.carryOutMaintenance();
     }
 }

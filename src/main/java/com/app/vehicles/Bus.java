@@ -7,12 +7,12 @@ public class Bus extends Vehicle {
 
     @Override
     public void startMoving() {
-        System.out.printf("\nАвтобус %s %s начал движение", getBrand(), getModel());
+        System.out.printf("Автобус %s %s начал движение\n", getBrand(), getModel());
     }
 
     @Override
     public void finishMoving() {
-        System.out.printf("\nАвтобус %s %s остановился", getBrand(), getModel());
+        System.out.printf("Автобус %s %s остановился\n", getBrand(), getModel());
     }
 
     @Override

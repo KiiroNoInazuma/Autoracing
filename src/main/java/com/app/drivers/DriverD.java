@@ -10,19 +10,19 @@ public class DriverD extends Driver<Bus>{
 
     @Override
     public void driverStartMoving(Bus transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " запустил двигатель");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " запустил двигатель");
         transport.startMoving();
     }
 
     @Override
     public void driverFinishMoving(Bus transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " заглушил двигатель");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " заглушил двигатель");
         transport.finishMoving();
     }
 
     @Override
     public void driverRefuelCar(Bus transport) {
-        System.out.println(getName() + "с категорией прав " + LICENSE + " остановился заправиться");
+        System.out.println(getName() + " с категорией прав " + LICENSE + " остановился заправиться");
         transport.carryOutMaintenance();
     }
 }
