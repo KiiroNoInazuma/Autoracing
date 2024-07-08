@@ -1,6 +1,5 @@
 package com.app.drivers;
 
-import com.app.vehicles.Car;
 import com.app.vehicles.Truck;
 
 public class DriverC extends Driver<Truck>{

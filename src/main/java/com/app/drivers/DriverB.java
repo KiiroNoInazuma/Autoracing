@@ -1,6 +1,5 @@
 package com.app.drivers;
 
-import com.app.stat.Competitive;
 import com.app.vehicles.Car;
 
 public class DriverB extends Driver<Car> {

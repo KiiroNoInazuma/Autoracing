@@ -18,6 +18,9 @@ public abstract class Driver<T extends Vehicle> {
         this.drivingExperience = calcDrivingExperience(dataBeginExperience);
     }
 
+    public String getName() {
+        return name;
+    }
 
     public abstract void driverStartMoving(T transport);
 
@@ -38,16 +41,4 @@ public abstract class Driver<T extends Vehicle> {
                 DateTimeFormatter.ofPattern("dd.MM.yyyy")).getYear();
     }
 
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Driver{" +
-                "name='" + name + '\'' +
-                ", driverLicense=" + driverLicense +
-                ", drivingExperience=" + drivingExperience +
-                '}';
-    }
 }
