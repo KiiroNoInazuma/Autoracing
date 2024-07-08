@@ -18,7 +18,7 @@ public class Car extends Vehicle {
 
     @Override
     public void carryOutMaintenance() {
-        System.out.println("Автомобиль обслуживается");
+        System.out.println("Автомобиль " + getBrand() + " обслуживается");
     }
 
     @Override
