@@ -1,8 +1,24 @@
 package com.app.vehicles;
 
 public class Truck extends Vehicle{
-    public Truck(String brand, String model, Double engineCapacity) {
+
+    public enum LiftingCapacityType{
+        N1("C полной массой до 3,5 тонн"),
+        N2("C полной массой свыше 3,5 до 12 тонн"),
+        N3("с полной массой свыше 12 тонн");
+
+        private final String typeTransport;
+
+        LiftingCapacityType(String typeTransport) {
+            this.typeTransport = typeTransport;
+        }
+    }
+
+    private final LiftingCapacityType bodyType;
+
+    public Truck(String brand, String model, Double engineCapacity, LiftingCapacityType bodyType) {
         super(brand, model, engineCapacity);
+        this.bodyType = bodyType;
     }
 
     @Override
@@ -13,6 +29,11 @@ public class Truck extends Vehicle{
     @Override
     public void finishMoving() {
         System.out.printf("Грузовик %s %s остановился\n", getBrand(), getModel());
+    }
+
+    @Override
+    public void printType() {
+        System.out.println(bodyType.typeTransport);
     }
 
     @Override

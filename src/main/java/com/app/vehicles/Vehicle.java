@@ -20,6 +20,7 @@ public abstract class Vehicle implements Competitive {
     public abstract void startMoving();
 
     public abstract void finishMoving();
+    public abstract void printType();
 
     private String propertiesValidate(String value) {
         if (isNull(value) || value.isBlank()) {
