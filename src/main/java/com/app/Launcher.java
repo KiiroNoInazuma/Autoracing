@@ -16,11 +16,11 @@ public class Launcher {
         Truck truck = new Truck("Volvo", "FH", 12.8, Truck.LiftingCapacityType.N1);
         Bus bus = new Bus("MAN", "Lion", 10.5, Bus.ContributionType.LARGE);
 
-        Driver<Car> driver1 = new DriverB("Женя", true, "23.08.2012");
+        Driver<Car> driver1 = new DriverB("Женя", false, "23.08.2012");
         Driver<Truck> driver2 = new DriverC("Дмитрий", true, "23.08.2011");
         Driver<Bus> driver3 = new DriverD("Вадим", true, "23.08.2010");
 
-        driver1.driverStartMoving(car);
+        /*driver1.driverStartMoving(car);
         driver1.driverFinishMoving(car);
         driver1.driverRefuelCar(car);
         System.out.println();
@@ -36,7 +36,11 @@ public class Launcher {
 
         car.printType();
         truck.printType();
-        bus.printType();
+        bus.printType();*/
+
+       /* car.goThroughDiagnostics();
+        truck.goThroughDiagnostics();
+        bus.goThroughDiagnostics();*/
 
 
 

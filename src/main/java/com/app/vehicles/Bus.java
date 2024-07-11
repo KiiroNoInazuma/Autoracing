@@ -39,6 +39,11 @@ public class Bus extends Vehicle {
     }
 
     @Override
+    public void goThroughDiagnostics() {
+        throw new UnsupportedOperationException("Автобусы диагностику проходить не могут");
+    }
+
+    @Override
     public void carryOutMaintenance() {
         System.out.println("Автобус " + getBrand() + " обслуживается");
     }

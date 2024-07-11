@@ -37,6 +37,11 @@ public class Truck extends Vehicle{
     }
 
     @Override
+    public void goThroughDiagnostics() {
+        System.out.println("Грузовик " +getBrand()+" "+getModel()+ " диагностику прошел");
+    }
+
+    @Override
     public void carryOutMaintenance() {
         System.out.println("Грузовик " + getBrand() + " обслуживается");
     }

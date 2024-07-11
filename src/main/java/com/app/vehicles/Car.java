@@ -43,6 +43,11 @@ public class Car extends Vehicle {
     }
 
     @Override
+    public void goThroughDiagnostics() {
+        System.out.println("Автомобиль " +getBrand()+" "+getModel()+ " диагностику прошел");
+    }
+
+    @Override
     public void carryOutMaintenance() {
         System.out.println("Автомобиль " + getBrand() + " обслуживается");
     }

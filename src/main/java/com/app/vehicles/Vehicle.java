@@ -21,6 +21,7 @@ public abstract class Vehicle implements Competitive {
 
     protected abstract void finishMoving();
     protected abstract void printType();
+    protected abstract void goThroughDiagnostics();
 
     private String propertiesValidate(String value) {
         if (isNull(value) || value.isBlank()) {

@@ -1,5 +1,6 @@
 package com.app.drivers;
 
+import com.app.exceptions.IncorrectDriverLicenseException;
 import com.app.vehicles.Vehicle;
 
 import java.time.LocalDate;
@@ -9,12 +10,12 @@ import static java.util.Objects.isNull;
 
 public abstract class Driver<T extends Vehicle> {
     private final String name;
-    private final boolean driverLicense;
+    private final Boolean driverLicense;
     private final Integer drivingExperience;
 
-    protected Driver(String name, boolean driverLicense, String dataBeginExperience) {
+    protected Driver(String name, Boolean driverLicense, String dataBeginExperience) {
         this.name = propertiesValidate(name);
-        this.driverLicense = driverLicense;
+        this.driverLicense = wrapperCheckDriverLicense(driverLicense);
         this.drivingExperience = calcDrivingExperience(dataBeginExperience);
     }
 
@@ -22,11 +23,27 @@ public abstract class Driver<T extends Vehicle> {
         return name;
     }
 
-    public abstract void driverStartMoving(T transport);
+    protected abstract void driverStartMoving(T transport);
 
-    public abstract void driverFinishMoving(T transport);
+    protected abstract void driverFinishMoving(T transport);
 
-    public abstract void driverRefuelCar(T transport);
+    protected abstract void driverRefuelCar(T transport);
+
+    private Boolean wrapperCheckDriverLicense(Boolean driverLicense){
+        try{
+            checkDriverLicense(driverLicense);
+        } catch (IncorrectDriverLicenseException e) {
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
+
+
+    private void checkDriverLicense(Boolean driverLicense) throws IncorrectDriverLicenseException {
+        if (isNull(driverLicense) || !driverLicense) {
+            throw new IncorrectDriverLicenseException("У водителя нет прав! Нет допуска к управлению ТС");
+        }
+    }
 
 
     private String propertiesValidate(String value) {
@@ -40,5 +57,6 @@ public abstract class Driver<T extends Vehicle> {
         return LocalDate.now().getYear() - LocalDate.parse(propertiesValidate(dataBeginExp),
                 DateTimeFormatter.ofPattern("dd.MM.yyyy")).getYear();
     }
+
 
 }
