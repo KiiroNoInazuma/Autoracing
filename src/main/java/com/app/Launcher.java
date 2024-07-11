@@ -8,6 +8,8 @@ import com.app.vehicles.Bus;
 import com.app.vehicles.Car;
 import com.app.vehicles.Truck;
 
+import java.util.Arrays;
+
 public class Launcher {
 
     public static void main(String[] args) {
@@ -20,7 +22,7 @@ public class Launcher {
         Driver<Truck> driver2 = new DriverC("Дмитрий", true, "23.08.2011");
         Driver<Bus> driver3 = new DriverD("Вадим", true, "23.08.2010");
 
-        /*driver1.driverStartMoving(car);
+        driver1.driverStartMoving(car);
         driver1.driverFinishMoving(car);
         driver1.driverRefuelCar(car);
         System.out.println();
@@ -30,11 +32,13 @@ public class Launcher {
         System.out.println();
         driver3.driverStartMoving(bus);
         driver3.driverFinishMoving(bus);
-        driver3.driverRefuelCar(bus);*/
+        driver3.driverRefuelCar(bus);
 
-       /* car.printType();
+
+
+        car.printType();
         truck.printType();
-        bus.printType();*/
+        bus.printType();
 
 
 

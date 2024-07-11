@@ -11,16 +11,16 @@ public abstract class Vehicle implements Competitive {
     private final String model;
     private final Double engineCapacity;
 
-    public Vehicle(String brand, String model, Double engineCapacity) {
+    protected Vehicle(String brand, String model, Double engineCapacity) {
         this.brand = propertiesValidate(brand);
         this.model = propertiesValidate(model);
         this.engineCapacity = propertiesValidate(engineCapacity);
     }
 
-    public abstract void startMoving();
+    protected abstract void startMoving();
 
-    public abstract void finishMoving();
-    public abstract void printType();
+    protected abstract void finishMoving();
+    protected abstract void printType();
 
     private String propertiesValidate(String value) {
         if (isNull(value) || value.isBlank()) {
